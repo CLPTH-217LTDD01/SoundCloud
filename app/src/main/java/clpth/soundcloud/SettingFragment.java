@@ -6,9 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class OptionsFragment extends Fragment {
-    public static OptionsFragment newInstance() {
-        OptionsFragment fragment = new OptionsFragment();
+public class SettingFragment extends Fragment {
+    public static SettingFragment newInstance() {
+        SettingFragment fragment = new SettingFragment();
         return fragment;
     }
 
@@ -20,6 +20,6 @@ public class OptionsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_options, container, false);
+        return inflater.inflate(R.layout.fragment_setting, container, false);
     }
 }

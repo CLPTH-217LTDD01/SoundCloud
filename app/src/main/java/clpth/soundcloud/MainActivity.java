@@ -15,6 +15,8 @@ import java.lang.reflect.Field;
 
 public class MainActivity extends AppCompatActivity {
 
+    private String fragment = "HOME";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,37 +30,55 @@ public class MainActivity extends AppCompatActivity {
                 Fragment selectedFragment = null;
                 switch (item.getItemId()) {
                     case R.id.action_home:
-                        MainActivity.this.getSupportActionBar().setTitle("Home");
-                        selectedFragment = HomeFragment.newInstance();
+                        if (!fragment.equals("HOME")) {
+                            MainActivity.this.getSupportActionBar().setTitle("Home");
+                            selectedFragment = HomeFragment.newInstance();
+                            fragment = "HOME";
+                        }
                         break;
                     case R.id.action_stream:
-                        MainActivity.this.getSupportActionBar().setTitle("Stream");
-                        selectedFragment = StreamFragment.newInstance();
+                        if (!fragment.equals("STREAM")) {
+                            MainActivity.this.getSupportActionBar().setTitle("Stream");
+                            selectedFragment = StreamFragment.newInstance();
+                            fragment = "STREAM";
+                        }
                         break;
                     case R.id.action_search:
-                        MainActivity.this.getSupportActionBar().setTitle("");
-                        selectedFragment = SearchFragment.newInstance();
+                        if (!fragment.equals("SEARCH")) {
+                            MainActivity.this.getSupportActionBar().setTitle("");
+                            selectedFragment = SearchFragment.newInstance();
+                            fragment = "SEARCH";
+                        }
                         break;
                     case R.id.action_favorite:
-                        MainActivity.this.getSupportActionBar().setTitle("Collection");
-                        selectedFragment = FavoriteFragment.newInstance();
+                        if (!fragment.equals("FAVORITE")) {
+                            MainActivity.this.getSupportActionBar().setTitle("Collection");
+                            selectedFragment = FavoriteFragment.newInstance();
+                            fragment = "FAVORITE";
+                        }
                         break;
-                    case R.id.action_options:
-                        MainActivity.this.getSupportActionBar().setTitle("More");
-                        selectedFragment = OptionsFragment.newInstance();
+                    case R.id.action_setting:
+                        if (!fragment.equals("SETTING")) {
+                            MainActivity.this.getSupportActionBar().setTitle("More");
+                            selectedFragment = SettingFragment.newInstance();
+                            fragment = "SETTING";
+                        }
                         break;
                 }
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.frame_layout, selectedFragment);
-                transaction.commit();
-                return true;
+                if (selectedFragment != null) {
+                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                    transaction.replace(R.id.frame_layout, selectedFragment);
+                    transaction.commit();
+                    return true;
+                }
+                return false;
             }
         });
+        getSupportActionBar().setTitle("Home");
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_layout, HomeFragment.newInstance());
         transaction.commit();
     }
-
 
 
     public void disableShiftMode(BottomNavigationView view) {
@@ -71,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 0; i < menuView.getChildCount(); i++) {
                 BottomNavigationItemView item = (BottomNavigationItemView) menuView.getChildAt(i);
                 item.setShiftingMode(false);
-                // set once again checked value, so view will be updated
                 item.setChecked(item.getItemData().isChecked());
             }
         } catch (NoSuchFieldException e) {

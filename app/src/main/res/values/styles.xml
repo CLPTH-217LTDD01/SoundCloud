@@ -9,7 +9,6 @@
         <item name="actionBarTheme">@style/AppTheme.AppBarOverlay</item>
     </style>
 
-
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="android:textColorPrimary">@color/actionBarTextColor</item>
     </style>
