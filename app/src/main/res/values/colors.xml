@@ -9,4 +9,5 @@
     <color name="titleColor">#252525</color>
     <color name="borderPlaylist">#dcd9d9</color>
     <color name="dividerColor">#ececec</color>
+    <color name="hintText"></color>
 </resources>
