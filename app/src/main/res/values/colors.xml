@@ -5,8 +5,9 @@
     <color name="colorAccent">#000000</color>
     <color name="colorNavBackground">#000000</color>
     <color name="actionBarBackground">#ffffff</color>
-    <color name="actionBarTextColor">#717170</color>
     <color name="titleColor">#252525</color>
     <color name="borderPlaylist">#dcd9d9</color>
     <color name="dividerColor">#ececec</color>
+    <color name="colorActionBarText">#7f7f7f</color>
+    <color name="colorPrimaryText">#313131</color>
 </resources>

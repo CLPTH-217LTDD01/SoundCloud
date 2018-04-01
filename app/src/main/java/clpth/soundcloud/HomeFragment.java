@@ -103,7 +103,7 @@ public class HomeFragment extends Fragment {
 
         charts.add(new Playlist(R.drawable.all_music_genres, ellipsize("All music genres", 24), "New & Hot"));
         charts.add(new Playlist(R.drawable.ambient, ellipsize("Ambient", 24), "New & Hot"));
-        charts.add(new Playlist(R.drawable.country, ellipsize("country", 24), "New & Hot"));
+        charts.add(new Playlist(R.drawable.country, ellipsize("Country", 24), "New & Hot"));
         charts.add(new Playlist(R.drawable.dance_n_edm, ellipsize("Dance & EDM", 24), "New & Hot"));
         charts.add(new Playlist(R.drawable.drum_n_bass, ellipsize("Drum & Bass", 24), "New & Hot"));
         charts.add(new Playlist(R.drawable.dubstep, ellipsize("Dubstep", 24), "New & Hot"));
