@@ -18,8 +18,6 @@ import android.widget.SearchView;
 import java.lang.reflect.Field;
 
 
-
-
 public class MainActivity extends AppCompatActivity {
 
     private String fragment = "HOME";
@@ -85,31 +83,6 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_layout, HomeFragment.newInstance());
         transaction.commit();
-    }
-
-
-
-
-
-    @Override
-    public boolean onCreateOptionsMenu  (Menu menu) {
-        MenuInflater inflater=getMenuInflater();
-        inflater.inflate(R.menu.menu_nsh,menu);
-        MenuItem mnuSearch=menu.findItem(R.id.mnuSearch);
-        SearchView searchView= (SearchView) mnuSearch.getActionView();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange  (String s) {
-                return false;
-            }
-        });
-        return super.onCreateOptionsMenu(menu);
     }
 
     public void disableShiftMode(BottomNavigationView view) {
