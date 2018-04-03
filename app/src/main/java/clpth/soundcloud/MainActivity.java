@@ -1,5 +1,6 @@
 package clpth.soundcloud;
 
+
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
@@ -8,10 +9,16 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.SearchView;
 
 
 import java.lang.reflect.Field;
+
+
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -80,6 +87,30 @@ public class MainActivity extends AppCompatActivity {
         transaction.commit();
     }
 
+
+
+
+
+    @Override
+    public boolean onCreateOptionsMenu  (Menu menu) {
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.menu_nsh,menu);
+        MenuItem mnuSearch=menu.findItem(R.id.mnuSearch);
+        SearchView searchView= (SearchView) mnuSearch.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange  (String s) {
+                return false;
+            }
+        });
+        return super.onCreateOptionsMenu(menu);
+    }
 
     public void disableShiftMode(BottomNavigationView view) {
         BottomNavigationMenuView menuView = (BottomNavigationMenuView) view.getChildAt(0);
