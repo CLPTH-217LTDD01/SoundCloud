@@ -185,8 +185,20 @@
                     android:text="Log out"
                     android:textColor="@color/colorPrimaryText" />
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAppVerson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="App Verson 5.25.0"
+                    android:textColor="#a7a7a7" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
-
 </RelativeLayout>
