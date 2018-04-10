@@ -64,6 +64,8 @@
                     android:id="@+id/tvNotify"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
                     android:padding="15dp"
                     android:text="Notifications"
                     android:textColor="@color/colorPrimaryText" />
@@ -80,6 +82,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
                     android:padding="15dp"
                     android:text="Record"
                     android:textColor="@color/colorPrimaryText" />
@@ -95,6 +99,8 @@
                     android:id="@+id/tvBasicSetting"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
                     android:padding="15dp"
                     android:text="Basic settings"
                     android:textColor="@color/colorPrimaryText" />
@@ -110,6 +116,8 @@
                     android:id="@+id/tvNotifySetting"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
                     android:padding="15dp"
                     android:text="Notification settings"
                     android:textColor="@color/colorPrimaryText" />
@@ -121,12 +129,14 @@
                 android:layout_marginTop="15dp"
                 android:background="#ffffff"
                 android:orientation="horizontal">
-
+                
                 <TextView
                     android:id="@+id/tvInstall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
                     android:padding="15dp"
                     android:text="Install SoundCloud Pulse app"
                     android:textColor="@color/colorPrimaryText" />
@@ -135,6 +145,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
                     android:gravity="end"
                     android:padding="15dp"
                     android:text="for Creators"
@@ -151,6 +163,8 @@
                     android:id="@+id/tvHelp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
                     android:padding="15dp"
                     android:text="Help"
                     android:textColor="@color/colorPrimaryText" />
@@ -166,6 +180,8 @@
                     android:id="@+id/tvLegal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
                     android:padding="15dp"
                     android:text="Legal"
                     android:textColor="@color/colorPrimaryText" />
@@ -174,6 +190,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
                 android:layout_marginTop="15dp"
                 android:background="#ffffff">
 
@@ -181,8 +198,10 @@
                     android:id="@+id/tvLogout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
                     android:padding="15dp"
-                    android:text="Log out"
+                    android:text="Sign out"
                     android:textColor="@color/colorPrimaryText" />
             </LinearLayout>
             <LinearLayout

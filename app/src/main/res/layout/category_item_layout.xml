@@ -22,7 +22,7 @@
         android:textSize="12dp" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvPlaylist"
+        android:id="@+id/rvAlbum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"

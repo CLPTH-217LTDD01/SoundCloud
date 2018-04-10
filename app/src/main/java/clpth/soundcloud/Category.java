@@ -3,17 +3,17 @@ package clpth.soundcloud;
 public class Category {
     private String title;
     private String hint;
-    private PlaylistRecyclerAdapter playlistRecyclerAdapter;
+    private AlbumRecyclerAdapter albumRecyclerAdapter;
 
     public Category(String title, String hint) {
         this.title = title;
         this.hint = hint;
     }
 
-    public Category(String title, String hint, PlaylistRecyclerAdapter playlistRecyclerAdapter) {
+    public Category(String title, String hint, AlbumRecyclerAdapter albumRecyclerAdapter) {
         this.title = title;
         this.hint = hint;
-        this.playlistRecyclerAdapter = playlistRecyclerAdapter;
+        this.albumRecyclerAdapter = albumRecyclerAdapter;
     }
 
     public String getTitle() {
@@ -32,11 +32,11 @@ public class Category {
         this.hint = hint;
     }
 
-    public PlaylistRecyclerAdapter getPlaylistRecyclerAdapter() {
-        return playlistRecyclerAdapter;
+    public AlbumRecyclerAdapter getAlbumRecyclerAdapter() {
+        return albumRecyclerAdapter;
     }
 
-    public void setPlaylistRecyclerAdapter(PlaylistRecyclerAdapter playlistRecyclerAdapter) {
-        this.playlistRecyclerAdapter = playlistRecyclerAdapter;
+    public void setAlbumRecyclerAdapter(AlbumRecyclerAdapter albumRecyclerAdapter) {
+        this.albumRecyclerAdapter = albumRecyclerAdapter;
     }
 }

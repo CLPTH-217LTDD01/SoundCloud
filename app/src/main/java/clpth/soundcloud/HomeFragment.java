@@ -34,81 +34,81 @@ public class HomeFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
         //--------------------------------------Workout---------------------------------------------
-        ArrayList<Playlist> workout = new ArrayList<>();
+        ArrayList<Album> workout = new ArrayList<>();
 
-        workout.add(new Playlist(R.drawable.pump_the_beat, ellipsize("PumpTheBeat.com Presents: Weekend Workout Vol. 17", 24), "Lowest Ends"));
-        workout.add(new Playlist(R.drawable.workout_edm_10, ellipsize("Workout EDM 10", 24), "GusManke"));
-        workout.add(new Playlist(R.drawable.work_out_or_get_out, ellipsize("Work out or get out", 24), "maddieparrot"));
-        workout.add(new Playlist(R.drawable.run, ellipsize("Run", 24), "YVK7"));
-        workout.add(new Playlist(R.drawable.no_pain_no_gain, ellipsize("Savage Mode", 24), "Tristen"));
-        workout.add(new Playlist(R.drawable.run_it_out, ellipsize("Run It Out | thewaywardwalrus.com", 24), "The Wayward Walrus"));
+        workout.add(new Album(R.drawable.pump_the_beat, "PumpTheBeat.com Presents: Weekend Workout Vol. 17", "Lowest Ends"));
+        workout.add(new Album(R.drawable.workout_edm_10, "Workout EDM 10", "GusManke"));
+        workout.add(new Album(R.drawable.work_out_or_get_out, "Work out or get out", "maddieparrot"));
+        workout.add(new Album(R.drawable.run, "Run", "YVK7"));
+        workout.add(new Album(R.drawable.no_pain_no_gain, "Savage Mode", "Tristen"));
+        workout.add(new Album(R.drawable.run_it_out, "Run It Out | thewaywardwalrus.com", "The Wayward Walrus"));
 
-        PlaylistRecyclerAdapter workoutAdapter = new PlaylistRecyclerAdapter(workout);
+        AlbumRecyclerAdapter workoutAdapter = new AlbumRecyclerAdapter(workout);
         //------------------------------------------------------------------------------------------
 
         //--------------------------------------Party---------------------------------------------
-        ArrayList<Playlist> party = new ArrayList<>();
+        ArrayList<Album> party = new ArrayList<>();
 
-        party.add(new Playlist(R.drawable.saxxy_deep_house, ellipsize("Saxxy Deep House (2018 Sping Collection)", 24), "Westcoast Radio (EDM)"));
-        party.add(new Playlist(R.drawable.chill_vibes, ellipsize("CHILL VIBES", 24), "3sUP"));
-        party.add(new Playlist(R.drawable.grooveey_danceyy, ellipsize("Grooveey danceyy", 24), "*seba*"));
-        party.add(new Playlist(R.drawable.youre_welcome, ellipsize("You're welcome", 24), "MattRaith"));
-        party.add(new Playlist(R.drawable.yawk, ellipsize("Yawk", 24), "TeamDr"));
-        party.add(new Playlist(R.drawable.summer_fireworks, ellipsize("Summer Fireworks", 24), "Heather."));
+        party.add(new Album(R.drawable.saxxy_deep_house, "Saxxy Deep House (2018 Sping Collection)", "Westcoast Radio (EDM)"));
+        party.add(new Album(R.drawable.chill_vibes, "CHILL VIBES", "3sUP"));
+        party.add(new Album(R.drawable.grooveey_danceyy, "Grooveey danceyy", "*seba*"));
+        party.add(new Album(R.drawable.youre_welcome, "You're welcome", "MattRaith"));
+        party.add(new Album(R.drawable.yawk, "Yawk", "TeamDr"));
+        party.add(new Album(R.drawable.summer_fireworks, "Summer Fireworks", "Heather."));
 
-        PlaylistRecyclerAdapter partyAdapter = new PlaylistRecyclerAdapter(party);
+        AlbumRecyclerAdapter partyAdapter = new AlbumRecyclerAdapter(party);
         //------------------------------------------------------------------------------------------
 
         //----------------------------------------Relax---------------------------------------------
-        ArrayList<Playlist> relax = new ArrayList<>();
+        ArrayList<Album> relax = new ArrayList<>();
 
-        relax.add(new Playlist(R.drawable.relaxing_sunday_mornings, ellipsize("Relaxing Sunday Mornings - An Indie/Folk/Pop Playlist | Vol. 1", 24), "alexrainbirdMusic"));
-        relax.add(new Playlist(R.drawable.chill_vibes, ellipsize("CHILL VIBES", 24), "3sUP"));
-        relax.add(new Playlist(R.drawable.grooveey_danceyy, ellipsize("Grooveey danceyy", 24), "*seba*"));
-        relax.add(new Playlist(R.drawable.youre_welcome, ellipsize("You're welcome", 24), "MattRaith"));
-        relax.add(new Playlist(R.drawable.yawk, ellipsize("Yawk", 24), "TeamDr"));
-        relax.add(new Playlist(R.drawable.summer_fireworks, ellipsize("Summer Fireworks", 24), "Heather."));
+        relax.add(new Album(R.drawable.relaxing_sunday_mornings, "Relaxing Sunday Mornings - An Indie/Folk/Pop Album | Vol. 1", "alexrainbirdMusic"));
+        relax.add(new Album(R.drawable.chill_vibes, "CHILL VIBES", "3sUP"));
+        relax.add(new Album(R.drawable.grooveey_danceyy, "Grooveey danceyy", "*seba*"));
+        relax.add(new Album(R.drawable.youre_welcome, "You're welcome", "MattRaith"));
+        relax.add(new Album(R.drawable.yawk, "Yawk", "TeamDr"));
+        relax.add(new Album(R.drawable.summer_fireworks, "Summer Fireworks", "Heather."));
 
-        PlaylistRecyclerAdapter relaxAdapter = new PlaylistRecyclerAdapter(relax);
+        AlbumRecyclerAdapter relaxAdapter = new AlbumRecyclerAdapter(relax);
         //------------------------------------------------------------------------------------------
 
         //----------------------------------------Study---------------------------------------------
-        ArrayList<Playlist> study = new ArrayList<>();
+        ArrayList<Album> study = new ArrayList<>();
 
-        study.add(new Playlist(R.drawable.stellas_coffee_house, ellipsize("Stella's Coffee House", 24), "Mah"));
-        study.add(new Playlist(R.drawable.tropixaton, ellipsize("Tropixaton | Finals Antidote vol. 3", 24), "GoodVibesOnly"));
-        study.add(new Playlist(R.drawable.music_for_concentration, ellipsize("Music For Concentration", 24), "Tracklist"));
-        study.add(new Playlist(R.drawable.study, ellipsize("Study Study Study Study", 24), "AgentOxygen"));
-        study.add(new Playlist(R.drawable.study_electronic_chill, ellipsize("Study Electronic Chill", 24), "Randy Gerard C R"));
-        study.add(new Playlist(R.drawable.rainy_day, ellipsize("Rainy Day", 24), "so.phree"));
+        study.add(new Album(R.drawable.stellas_coffee_house, "Stella's Coffee House", "Mah"));
+        study.add(new Album(R.drawable.tropixaton, "Tropixaton | Finals Antidote vol. 3", "GoodVibesOnly"));
+        study.add(new Album(R.drawable.music_for_concentration, "Music For Concentration", "Tracklist"));
+        study.add(new Album(R.drawable.study, "Study Study Study Study", "AgentOxygen"));
+        study.add(new Album(R.drawable.study_electronic_chill, "Study Electronic Chill", "Randy Gerard C R"));
+        study.add(new Album(R.drawable.rainy_day, "Rainy Day", "so.phree"));
 
-        PlaylistRecyclerAdapter studyAdapter = new PlaylistRecyclerAdapter(study);
+        AlbumRecyclerAdapter studyAdapter = new AlbumRecyclerAdapter(study);
         //------------------------------------------------------------------------------------------
 
         //------------------------------------------Sleep-------------------------------------------
-        ArrayList<Playlist> sleep = new ArrayList<>();
+        ArrayList<Album> sleep = new ArrayList<>();
 
-        sleep.add(new Playlist(R.drawable.sleep, ellipsize("Sleep", 24), "Kyler Smith1"));
-        sleep.add(new Playlist(R.drawable.sleeping_n_high, ellipsize("Sleeping & High Brain Cells List", 24), "Thomas"));
-        sleep.add(new Playlist(R.drawable.bed_time_blues, ellipsize("Bed Time Blues", 24), "*maddxe*"));
-        sleep.add(new Playlist(R.drawable.new_rap_n_edm, ellipsize("New Rap & EDM (Top 20) 2018", 24), "Westcoast Radio (EDM)"));
-        sleep.add(new Playlist(R.drawable.best_chill_trap, ellipsize("Best Chill Trap of 2018 (Mixtape)", 24), "Westcoast Radio (EDM)"));
-        sleep.add(new Playlist(R.drawable.sad_sleep_songs, ellipsize("Sad/Sleep songs", 24), "Marcelinethevampirequeen."));
+        sleep.add(new Album(R.drawable.sleep, "Sleep", "Kyler Smith1"));
+        sleep.add(new Album(R.drawable.sleeping_n_high, "Sleeping & High Brain Cells List", "Thomas"));
+        sleep.add(new Album(R.drawable.bed_time_blues, "Bed Time Blues", "*maddxe*"));
+        sleep.add(new Album(R.drawable.new_rap_n_edm, "New Rap & EDM (Top 20) 2018", "Westcoast Radio (EDM)"));
+        sleep.add(new Album(R.drawable.best_chill_trap, "Best Chill Trap of 2018 (Mixtape)", "Westcoast Radio (EDM)"));
+        sleep.add(new Album(R.drawable.sad_sleep_songs, "Sad/Sleep songs", "Marcelinethevampirequeen."));
 
-        PlaylistRecyclerAdapter sleepAdapter = new PlaylistRecyclerAdapter(sleep);
+        AlbumRecyclerAdapter sleepAdapter = new AlbumRecyclerAdapter(sleep);
         //------------------------------------------------------------------------------------------
 
         //-------------------------------------Charts: New & Hot------------------------------------
-        ArrayList<Playlist> charts = new ArrayList<>();
+        ArrayList<Album> charts = new ArrayList<>();
 
-        charts.add(new Playlist(R.drawable.all_music_genres, ellipsize("All music genres", 24), "New & Hot"));
-        charts.add(new Playlist(R.drawable.ambient, ellipsize("Ambient", 24), "New & Hot"));
-        charts.add(new Playlist(R.drawable.country, ellipsize("Country", 24), "New & Hot"));
-        charts.add(new Playlist(R.drawable.dance_n_edm, ellipsize("Dance & EDM", 24), "New & Hot"));
-        charts.add(new Playlist(R.drawable.drum_n_bass, ellipsize("Drum & Bass", 24), "New & Hot"));
-        charts.add(new Playlist(R.drawable.dubstep, ellipsize("Dubstep", 24), "New & Hot"));
+        charts.add(new Album(R.drawable.all_music_genres, "All music genres", "New & Hot"));
+        charts.add(new Album(R.drawable.ambient, "Ambient", "New & Hot"));
+        charts.add(new Album(R.drawable.country, "Country", "New & Hot"));
+        charts.add(new Album(R.drawable.dance_n_edm, "Dance & EDM", "New & Hot"));
+        charts.add(new Album(R.drawable.drum_n_bass, "Drum & Bass", "New & Hot"));
+        charts.add(new Album(R.drawable.dubstep, "Dubstep", "New & Hot"));
 
-        PlaylistRecyclerAdapter chartsAdapter = new PlaylistRecyclerAdapter(charts);
+        AlbumRecyclerAdapter chartsAdapter = new AlbumRecyclerAdapter(charts);
         //------------------------------------------------------------------------------------------
 
         //Category
@@ -135,11 +135,4 @@ public class HomeFragment extends Fragment {
         return rootView;
     }
 
-    String ellipsize(String input, int maxLength) {
-        String ellip = "...";
-        if (input == null || input.length() <= maxLength || input.length() < ellip.length()) {
-            return input;
-        }
-        return input.substring(0, maxLength - ellip.length()).concat(ellip);
-    }
 }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_playlist_add" android:title="Add to Next up" />
+    <item android:id="@+id/action_playlist_shuffle" android:title="Shuffle playlist" />
+    <item android:id="@+id/action_playlist_repost" android:title="Repost on SoundCloud" />
+    <item android:id="@+id/action_playlist_share" android:title="Share" />
+</menu>
