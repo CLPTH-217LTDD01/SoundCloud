@@ -38,43 +38,43 @@ public class SearchFragment extends Fragment {
 
     }
 
-//    private void addControls(View view) {
-//       lvAndround=view.findViewById(R.id.lvAndround);
-//       dsAndround=new ArrayList<>();
-//       dsAndround.addAll(Arrays.asList(getResources().getStringArray(R.array.arrAndround)));
-//       adapterAndround=new ArrayAdapter<String>(getContext(),android.R.layout.simple_list_item_1,dsAndround);
-//       lvAndround.setAdapter(adapterAndround);
-//    }
+    private void addControls(View view) {
+        lvAndround = view.findViewById(R.id.lvAndround);
+        dsAndround = new ArrayList<>();
+        dsAndround.addAll(Arrays.asList(getResources().getStringArray(R.array.arrAndround)));
+        adapterAndround = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, dsAndround);
+        lvAndround.setAdapter(adapterAndround);
+    }
 
 
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-//        View view = inflater.inflate(R.layout.fragment_search, container, false);
-//        addControls(view);
-//        addEvents();
-//        return view;
-//
-//    }
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_search, container, false);
+        addControls(view);
+        addEvents();
+        return view;
+    }
 
-//    @Override
-//    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-//        inflater.inflate(R.menu.search_menu, menu);
-//        MenuItem mnuSearch = menu.findItem(R.id.mnuSearch);
-//        SearchView searchView = (SearchView) mnuSearch.getActionView();
-//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//            @Override
-//            public boolean onQueryTextSubmit(String s) {
-//
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onQueryTextChange(String s) {
-//                return false;
-//            }
-//        });
-//        super.onCreateOptionsMenu(menu, inflater);
-//    }
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.search_menu, menu);
+        MenuItem mnuSearch = menu.findItem(R.id.mnuSearch);
+        SearchView searchView = (SearchView) mnuSearch.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                adapterAndround.getFilter().filter(s);
+                return false;
+            }
+        });
+        super.onCreateOptionsMenu(menu, inflater);
+    }
 
 }
